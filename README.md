@@ -1,4 +1,4 @@
-# A couple of ML algorithms coded from scratch (numpy)
+# Numpy imnplementation of a couple of ML Algorithms
 - [x] kNN
 - [x] 3 Layer MLP (ReLU & Softmax activations), Cross-Entropy Loss
 - [x] Least Squares
