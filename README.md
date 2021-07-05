@@ -6,12 +6,16 @@ This repo contains a numpy from-scratch implementation of some ML algorithms, in
 - [x] Least Squares
 - [x] Winnow
 - [x] One-vs-One and One-vs-All Muliticlass Kernel Perceptron
+- [x] logistic regression with AdaGrad optimiser
+- [ ] SVM (primal + dual)
 
 
 
-## Additional Functions
+## Additional Functions 
+files: CV.py and helper_functions.py
 - [x] random train/test split
 - [x] Cross Validation
 - [x] Gram Matrix (for polynomial and Gaussian kernels)
+- [x] numerical gradient check
 
 TODO: change output type from error rate to prediction
