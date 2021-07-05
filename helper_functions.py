@@ -83,3 +83,30 @@ def loss(target, nn_out):
 def softmax(x):
     expA = np.exp(x - np.max(x))
     return expA / expA.sum(axis=0)
+
+
+def numericalgradient(fun,w,e):
+    """
+    Provides a numerical estimate of the gradient of fun w.r.t. to parameters w
+    :param e: epsilon
+    :return: numerical gradient estimate (shape of w)
+    """
+    # get dimensionality
+    d = len(w)
+    # initialize numerical derivative
+    dh = np.zeros(d)
+    # go through dimensions
+    for i in range(d):
+        # copy the weight vector
+        nw = w.copy()
+        # perturb dimension i
+        nw[i] += e
+        # compute loss
+        l1, temp = fun(nw)
+        # perturb dimension i again
+        nw[i] -= 2*e
+        # compute loss
+        l2, temp = fun(nw)
+        # the gradient is the slope of the loss
+        dh[i] = (l1 - l2) / (2*e)
+    return dh
